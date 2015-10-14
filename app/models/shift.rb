@@ -10,7 +10,7 @@ class Shift < ActiveRecord::Base
       dates.each do |date|
         start_time = start_times[rand(6)]
 
-        rand(2).times do
+        rand(3).times do
           user.shifts.create(date: date, start_time: start_time)
           start_time += 2
         end
